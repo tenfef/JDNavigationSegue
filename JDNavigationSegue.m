@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Jayco Design Ltd. All rights reserved.
 //
 
-#import "PushNoAnimation.h"
+#import "JDNavigationSegue.h"
 
 @implementation JDNavigationSegue
 
@@ -16,7 +16,7 @@
     
     UISplitViewController*  root = (UISplitViewController*)w.rootViewController;    
     UINavigationController*       detailsNavController = [ root.viewControllers objectAtIndex: 1 ];
-
+    [detailsNavController pushViewController:[self destinationViewController] animated:NO];
 }
 
 @end
